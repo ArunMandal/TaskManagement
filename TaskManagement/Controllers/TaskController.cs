@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using System.Threading.Tasks;
@@ -7,7 +8,8 @@ using TaskManagement.Repository;
 
 namespace TaskManagement.Controllers
 {
-   
+
+    [Authorize]
     public class TaskController : Controller
     {
         private readonly ITaskRepository<Tasks> _taskRepository;
