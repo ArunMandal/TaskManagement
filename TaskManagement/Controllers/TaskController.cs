@@ -9,7 +9,7 @@ using TaskManagement.Repository;
 namespace TaskManagement.Controllers
 {
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class TaskController : Controller
     {
         private readonly ITaskRepository<Tasks> _taskRepository;
